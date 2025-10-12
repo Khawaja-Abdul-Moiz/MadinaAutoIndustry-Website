@@ -1,0 +1,559 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   font-family: 'Rubik', sans-serif;
+ }
+
+ .mt-4 {
+   margin-top: 2rem !important;
+ }
+
+ .logo-madina img {
+   height: 3.19rem !important;
+   width: auto;
+   object-fit: contain;
+   vertical-align: middle;
+ }
+
+ .logo-madina {
+   height: 3.5rem !important;
+ }
+
+ .logo {
+   display: none;
+   height: 32px;
+   width: 32px;
+   cursor: pointer;
+ }
+
+ .logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+ }
+
+ .navbar-custom {
+   position: fixed;
+   z-index: 9999999;
+   width: 100%;
+   padding: 10px 20px;
+   background-color: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .navbar-custom a:hover {
+   text-decoration: none;
+   color: #0ad40a;
+ }
+
+ .nav-links {
+   display: flex;
+   gap: 20px;
+ }
+
+ .nav-buttons {
+   display: flex;
+   gap: 10px;
+ }
+
+ .nav-buttons .btn-offers {
+   background-color: #10b981;
+   color: #fff;
+   border-radius: 50px;
+   padding: 5px 15px;
+   display: flex;
+   align-items: center;
+ }
+
+ .nav-buttons .btn-offers img {
+   margin-right: 5px;
+   height: 16px;
+   width: auto;
+ }
+
+ .nav-buttons .btn-login {
+   background-color: #bfdbfe;
+   color: #1e40af;
+   border-radius: 50px;
+   padding: 5px 15px;
+ }
+
+ .nav-buttons .btn-login:hover {
+   background-color: #93c5fd;
+ }
+
+ .lang-toggle {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   text-decoration: none;
+   color: #333;
+ }
+
+ .lang-toggle img {
+   width: 16px;
+   height: 12px;
+ }
+
+ .sidebar {
+   height: 100%;
+   width: 250px;
+   position: fixed;
+   top: 0;
+   right: -100%;
+   background-color: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
+   padding-top: 60px;
+   transition: right 0.3s ease;
+   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+   z-index: 1000;
+   border-left: 1px solid rgba(255, 255, 255, 0.3);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   z-index: 99999991;
+ }
+
+ .sidebar.active {
+   right: 0;
+ }
+
+ .close-btn {
+   display: none;
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   background: none;
+   border: none;
+   font-size: 24px;
+   color: #333;
+   cursor: pointer;
+ }
+
+ .sidebar.active .close-btn {
+   display: block;
+ }
+
+ .sidebar-links {
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+ }
+
+ .sidebar-links .nav-link {
+   padding: 10px 10px;
+   color: #333;
+ }
+
+ .sidebar-buttons {
+   display: flex;
+   flex-direction: column;
+   padding: 10px 20px;
+   gap: 10px;
+ }
+
+ .sidebar-buttons .btn-offers {
+   background-color: #10b981;
+   color: #fff;
+   border-radius: 50px;
+   padding: 5px 15px;
+   display: flex;
+   align-items: center;
+ }
+
+ .sidebar-buttons .btn-offers img {
+   margin-right: 5px;
+   height: 16px;
+   width: auto;
+ }
+
+ .sidebar-buttons .btn-login {
+   background-color: #bfdbfe;
+   color: #1e40af;
+   border-radius: 50px;
+   padding: 5px 15px;
+ }
+
+ .sidebar-buttons .btn-login:hover {
+   background-color: #93c5fd;
+ }
+
+ .sidebar-buttons .lang-toggle {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   text-decoration: none;
+   color: #333;
+ }
+
+ .sidebar-buttons .lang-toggle img {
+   width: 16px;
+   height: 12px;
+ }
+
+ @media (max-width: 1150px) {
+   .logo {
+     display: block;
+   }
+
+   .nav-links {
+     display: none;
+   }
+
+   .nav-buttons {
+     display: none;
+   }
+
+   .navbar-toggler {
+     display: none;
+   }
+ }
+
+ @media (max-width: 465px) {
+   .sidebar {
+     width: 100%;
+     right: -100%;
+   }
+
+   .sidebar-buttons {
+     padding: 10px 20px;
+     gap: 10px;
+   }
+
+   .sidebar-buttons .btn-offers,
+   .sidebar-buttons .btn-login,
+   .sidebar-buttons .lang-toggle {
+     display: flex;
+     width: 65%;
+     justify-content: left;
+     padding: 10px 20px;
+     font-size: 14px;
+     font-weight: 500;
+     box-sizing: border-box;
+   }
+
+   .sidebar-buttons .btn-offers img {
+     margin-right: 8px;
+     height: 16px;
+     width: 16px;
+   }
+
+   .sidebar-buttons .lang-toggle img {
+     width: 16px;
+     height: 12px;
+   }
+ }
+
+ .container {
+   max-width: 1400px;
+   margin: 0 auto;
+   position: relative;
+ }
+
+ /* Styles for Footer */
+ .color {
+   background-color: #f9f9f9f9;
+ }
+
+ .footer {
+   background-color: #f9f9f9f9;
+   width: 80%;
+   padding: 3rem 0rem 2rem;
+   margin: 3rem auto 0;
+   color: #2b2a29;
+ }
+
+ .footer-top {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-between;
+ }
+
+ .footer-column {
+   flex: 1 1 200px;
+   min-width: 200px;
+ }
+
+ .footer-column h4 {
+   font-weight: bold;
+   margin-bottom: 1rem;
+ }
+
+ .footer-column ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .footer-column ul li {
+   margin-bottom: 0.5rem;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 23.34px;
+ }
+
+ .footer-column ul li a {
+   text-decoration: none;
+   color: #2b2a29;
+ }
+
+ .company p {
+   margin-bottom: 1rem;
+   font-weight: 500;
+   font-size: 15.01px;
+   line-height: 28.34px;
+ }
+
+ .company span {
+   margin-right: 0.5rem;
+ }
+
+ .newsletter p {
+   margin-bottom: 1rem;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 23.34px;
+ }
+
+ .newsletter-form {
+   display: flex;
+   align-items: center;
+   background-color: #f5f5f5;
+   border-radius: 12px;
+   padding: 0.5rem 0.25rem !important;
+   max-width: 100%;
+   margin-bottom: 1rem;
+   gap: 1rem;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+ }
+
+ .newsletter-form input {
+   flex: 1;
+   border: none;
+   outline: none;
+   background: transparent;
+   font-size: 12px;
+   color: #2b2a29;
+ }
+
+ .newsletter-form input::placeholder {
+   color: #2b2a29;
+   opacity: 0.8;
+ }
+
+ .newsletter-form button {
+   background-color: #2b2a29;
+   border: none;
+   padding: 0.2rem;
+   border-radius: 50%;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background 0.2s ease;
+   min-width: 20px;
+   min-height: 20px;
+ }
+
+ .newsletter-form button:hover {
+   background-color: #0ad40a;
+ }
+
+ .newsletter-form button img {
+   width: 14px;
+   height: 14px;
+ }
+
+ .social-icons span {
+   font-weight: 700;
+   font-size: 15.41px;
+   line-height: 23.38px;
+ }
+
+ .icons i {
+   margin-right: 1rem;
+   cursor: pointer;
+ }
+
+ /* Bottom footer row */
+ .footer-bottom {
+   margin-top: 2rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   font-size: 14px;
+   align-items: center;
+   gap: 1rem;
+ }
+
+ .footer-links a {
+   color: #2b2a29;
+   text-decoration: none;
+   margin: 0 0.25rem;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 23.34px;
+ }
+
+ .footer-links span {
+   margin: 0 0.25rem;
+ }
+
+ /* Responsive */
+ @media (max-width: 1119.5px) {
+   .newsletter-form {
+     max-width: 45%;
+   }
+ }
+
+ @media (max-width: 829.8px) {
+   .newsletter-form {
+     max-width: 100%;
+   }
+ }
+
+ @media (max-width: 768px) {
+   .footer-top {
+     flex-direction: column;
+   }
+
+   .newsletter-input {
+     flex-direction: column;
+   }
+
+   .newsletter-input input,
+   .newsletter-input button {
+     width: 100%;
+   }
+
+   .newsletter-form {
+     max-width: 85%;
+   }
+
+   .footer-bottom {
+     flex-direction: column;
+     text-align: center;
+   }
+ }
+
+ @media (max-width: 345px) {
+   .logo-madina img {
+     height: 20px;
+   }
+
+   .logo img {
+     width: 92%;
+   }
+ }
+
+ @media (max-width: 420px) {
+   .newsletter-form {
+     align-items: stretch;
+     border-radius: 10px;
+     padding: 1rem;
+   }
+
+   .newsletter-form button {
+     align-self: flex-end;
+     border-radius: 50%;
+     margin-top: 0.5rem;
+   }
+
+   .navbar-custom {
+     padding: 10px 0px;
+   }
+ }
+
+ .footer-column ul li a:hover {
+   color: #0ad40a;
+ }
+
+ .footer-links a:hover {
+   color: #0ad40a;
+ }
+
+ .highlight {
+   color: #19a119;
+   ;
+ }
+
+ .message-icon {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background-color: #19a119;
+   padding: 12px;
+   border-radius: 50%;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   z-index: 1000;
+   transition: transform 0.2s ease;
+  }
+  
+  .message-icon:hover {
+    transform: scale(1.1);
+    background-color: #0ad40a;
+ }
+
+ .message-icon img {
+   width: 28px;
+   height: 28px;
+   display: block;
+ }
+
+ iframe {
+   width: 100%;
+ }
+
+ .email {
+   width: 20rem;
+ }
+
+ @media (max-width: 350px) {
+
+   .footer {
+     width: 96% !important;
+   }
+
+ }
+
+ .em {
+   color: #19a119 !important;
+ }
+
+ .em:hover {
+   color: #0ad40a !important;
+ }
+
+ @media (max-width: 701px) {
+
+   .logo-madina img {
+     height: 2.29rem !important;
+   }
+
+   .logo-madina {
+     height: 2.5rem !important;
+   }
+
+   .navbar-custom {
+     padding: 20px 1px;
+   }
+ }
+
+ @media (max-width: 560px) {
+
+  .logo-madina {
+    width: 13rem;
+  }
+
+  .logo-madina img {
+    width: 13rem;
+  }
+}
