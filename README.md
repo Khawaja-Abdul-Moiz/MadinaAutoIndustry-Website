@@ -1,24 +1,35 @@
 # Madina Auto Industries Website
 
-This is a business website developed to showcase the products and services of Madina Auto Industries.
+The Madina Auto Industries business website is now packaged as a Next.js project
+and is ready to deploy on Vercel.
 
-# 🌐 Live Website
-https://madinaautoindustries.com
+## Run locally
 
-# 💻 Technologies Used
-- HTML
-- CSS
-- JavaScript
+```bash
+npm install
+npm run dev
+```
 
-# 📌 Features
-- Responsive design (mobile and desktop friendly)
-- Clean and simple user interface
-- Product and business showcase
+Open [http://localhost:3000](http://localhost:3000) after the development server
+starts.
 
-# 👨‍💻 My Role
-- Designed and developed the complete frontend of the website
-- Structured content for better user experience
-- Deployed the website for real-world business use
+## Production build
 
-# 📁 Project Structure
-The main website files are located inside the **Madina** folder.
+```bash
+npm run build
+npm start
+```
+
+Vercel detects the Next.js framework automatically. The repository includes a
+`vercel.json` declaration for clarity.
+
+## Project structure
+
+- `app/` contains the Next.js entry route and metadata.
+- `public/` contains the existing website pages, styles, scripts, and product
+  images. Keeping these files in `public/` preserves all existing page URLs and
+  relative asset links while the project is migrated incrementally.
+- `MADINA/` is retained as the original source snapshot.
+
+The root route redirects to the existing home page at `/index.html`, and all
+other existing HTML pages remain directly deployable under their original URLs.
