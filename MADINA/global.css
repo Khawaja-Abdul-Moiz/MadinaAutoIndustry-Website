@@ -125,6 +125,19 @@
    right: 0;
  }
 
+ .sidebar-brand {
+   display: block;
+   width: fit-content;
+   margin: 0 auto 24px;
+ }
+
+ .sidebar-brand img {
+   display: block;
+   width: 175px;
+   height: auto;
+   object-fit: contain;
+ }
+
  .close-btn {
    display: none;
    position: absolute;
