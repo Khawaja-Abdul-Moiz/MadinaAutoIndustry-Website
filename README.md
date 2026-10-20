@@ -34,3 +34,4 @@ Vercel detects the Next.js framework automatically. The repository includes a
 The root route redirects to the existing home page at `/index.html`, and all
 other existing HTML pages remain directly deployable under their original URLs.
 Let's Deploy
+A final Edit
